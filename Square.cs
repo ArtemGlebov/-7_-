@@ -10,11 +10,7 @@ namespace Task_7_Фабрика_Фигур
         int side;                        //сторона
         int perimeterP;                 //периметр
         int areaS;                      //площадь
-        string [] color = { "чёрный", "белый", "зелёный", "синий", "красный", "жёлтый", "оранжевый", "глубой", "серый", "коричневый" }; //цвет
         string colorRan;
-        
-        
-
         public void display()
         {
             Console.WriteLine("Введите длину стороны: ");
@@ -30,12 +26,11 @@ namespace Task_7_Фабрика_Фигур
         }
         public void colorRandom () //ранндомный цвет квадрата
         {
+            string[] color = { "чёрный", "белый", "зелёный", "синий", "красный", "жёлтый", "оранжевый", "глубой", "серый", "коричневый" }; //цвет
             Random ran = new Random();
             int nums = (ran.Next(0, 9));
             colorRan = Convert.ToString(color[nums]);
         }
-
-        
           public void getInfo()
         {
             Console.WriteLine($" Параметры квадрата: \n Периметр: {perimeterP}\n Площадь: {areaS}\n Цвет: {colorRan}");
